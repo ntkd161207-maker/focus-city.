@@ -1,0 +1,14 @@
+{
+  "name": "focus-city",
+  "version": "2.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Focus City — the isometric city builder foundation",
+  "scripts": {
+    "start": "node scripts/serve.mjs",
+    "dev": "node scripts/serve.mjs",
+    "test": "node --test tests/world.test.js",
+    "test:browser": "node tests/browser-smoke.cjs"
+  },
+  "engines": { "node": ">=20" }
+}

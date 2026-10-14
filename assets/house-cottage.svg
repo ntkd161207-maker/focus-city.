@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 160">
+ <defs><linearGradient id="roof" x2="0.8" y2="1"><stop stop-color="#ce9670"/><stop offset="1" stop-color="#ab6c50"/></linearGradient><linearGradient id="glass" x2="0" y2="1"><stop stop-color="#72918a"/><stop offset="1" stop-color="#b5c8b6"/></linearGradient></defs>
+ <path d="m14 116 50 25 50-25-50-25Z" fill="#c9c8aa"/>
+ <path d="m20 64 44 22v48l-44-22Z" fill="#f0dfb8"/><path d="m64 86 44-22v48l-44 22Z" fill="#d0c29d"/>
+ <path d="m20 108 44 22 44-22v4l-44 22-44-22Z" fill="#b5ad8e"/>
+ <path d="m19 64 23-32 23 54Z" fill="#e5d2a6" stroke="#b28a60" stroke-width="1"/>
+ <path d="m17 64 25-35 47-23 25 57-49 24Z" fill="url(#roof)"/>
+ <path d="m17 64 25-35 23 58" fill="none" stroke="#875b49" stroke-width="4" stroke-linejoin="round"/>
+ <path d="m42 29 47-23m-24 81 49-24" fill="none" stroke="#dba781" stroke-width="3"/>
+ <g stroke="#8b5c45" stroke-opacity=".32" fill="none"><path d="m46 39 47-23m-42 34 46-23m-41 34 46-23m-42 35 47-24M53 24l23 57M65 18l24 57M77 12l24 57"/></g>
+ <path d="m86 16 10 5v21l-10-5Z" fill="#af8d70"/><path d="m96 21 8-4v21l-8 4Z" fill="#8c735d"/><path d="m84 16 10-5 12 6-10 5Z" fill="#d2b49a"/><path d="m89 16 5-2 6 3-5 2Z" fill="#675a50"/>
+ <path d="m35 59 8 4V52l-8-4Z" fill="#768b7c" stroke="#f7e9c9" stroke-width="2"/>
+ <g stroke="#f9efda" stroke-width="2"><path d="m27 77 11 6v16l-11-6Z" fill="url(#glass)"/><path d="m75 88 14-7v17l-14 7Z" fill="url(#glass)"/><path d="m94 78 9-5v17l-9 5Z" fill="url(#glass)"/></g>
+ <g fill="none" stroke="#e9e4cb" stroke-width="1.3"><path d="m32 80 0 15m-5-11 11 6M82 85v17m-7-5 14-7m9-15v15"/></g>
+ <path d="m44 91 12 6v32l-12-6Z" fill="#8e9e87" stroke="#cabd97"/><path d="m47 97 6 3v12l-6-3Z" fill="#b6c6aa"/><ellipse cx="53" cy="118" rx="1" ry="1.4" fill="#e8d4a6"/>
+ <path d="m40 121 19 9v4l-19-9Z" fill="#f1e6cb"/><path d="m40 125 19 9 6-3v4l-6 3-19-9Z" fill="#bfb89a"/>
+ <path d="m23 100 17 8v6l-17-8Z" fill="#b07e5d"/><path d="m24 100 15 7" stroke="#688659" stroke-width="5" stroke-linecap="round"/><g fill="#d6b886"><circle cx="28" cy="101" r="1.5"/><circle cx="35" cy="104" r="1.5"/></g>
+ <path d="m91 108 13-6v6l-13 6Z" fill="#9b785b"/><path d="m92 106 10-5" stroke="#7e9466" stroke-width="6" stroke-linecap="round"/>
+</svg>
