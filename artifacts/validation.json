@@ -1,0 +1,16 @@
+{
+  "date": "2026-10-15",
+  "mode": "production preview",
+  "base": "/focus-city./",
+  "viewport": "1600x1000",
+  "browser": "Chromium + SwiftShader (software WebGL, not target hardware benchmark)",
+  "loadedGLBs": 9,
+  "overviewStats": "1\nFPS\n·\n82 draw calls\n·\n345,438 tris",
+  "consoleAndPageErrors": [],
+  "checks": {
+    "unit": 30,
+    "browser": 6,
+    "typecheck": "passed",
+    "productionBuild": "passed"
+  }
+}
