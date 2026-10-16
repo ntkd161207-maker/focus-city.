@@ -20,12 +20,16 @@ test("renders textured GLBs under Pages base; camera, selection, preferences, sa
   await expect(page.getByRole("heading", { level: 1 })).toBeVisible();
   expect(models.size).toBe(9);
   await expect
-    .poll(async () =>
-      Number(
-        (await page.getByTestId("render-stats").innerText()).match(
-          /(\d+) draw calls/,
-        )?.[1] ?? 0,
-      ),
+    // Cold SwiftShader shader compilation on hosted CI can exceed 5 seconds.
+    // Still require a real rendered frame; do not replace this with scene-ready.
+    .poll(
+      async () =>
+        Number(
+          (await page.getByTestId("render-stats").innerText()).match(
+            /(\d+) draw calls/,
+          )?.[1] ?? 0,
+        ),
+      { timeout: 30000 },
     )
     .toBeGreaterThan(0);
   const canvas = page.getByTestId("city-canvas");
@@ -40,7 +44,9 @@ test("renders textured GLBs under Pages base; camera, selection, preferences, sa
   await page.mouse.move(cx, cy);
   await page.mouse.wheel(0, -400);
   await expect
-    .poll(() => page.getByTestId("render-stats").getAttribute("data-camera"))
+    .poll(() => page.getByTestId("render-stats").getAttribute("data-camera"), {
+      timeout: 15000,
+    })
     .not.toBe(before);
   const zoomed = await page
     .getByTestId("render-stats")
@@ -50,7 +56,9 @@ test("renders textured GLBs under Pages base; camera, selection, preferences, sa
   await page.mouse.move(cx + 90, cy + 35, { steps: 10 });
   await page.mouse.up();
   await expect
-    .poll(() => page.getByTestId("render-stats").getAttribute("data-camera"))
+    .poll(() => page.getByTestId("render-stats").getAttribute("data-camera"), {
+      timeout: 15000,
+    })
     .not.toBe(zoomed);
   const rotated = await page
     .getByTestId("render-stats")
@@ -60,11 +68,15 @@ test("renders textured GLBs under Pages base; camera, selection, preferences, sa
   await page.mouse.move(cx + 50, cy, { steps: 10 });
   await page.mouse.up({ button: "right" });
   await expect
-    .poll(() => page.getByTestId("render-stats").getAttribute("data-camera"))
+    .poll(() => page.getByTestId("render-stats").getAttribute("data-camera"), {
+      timeout: 15000,
+    })
     .not.toBe(rotated);
   await page.getByRole("button", { name: "Đặt lại góc nhìn" }).click();
   await expect
-    .poll(() => page.getByTestId("render-stats").getAttribute("data-camera"))
+    .poll(() => page.getByTestId("render-stats").getAttribute("data-camera"), {
+      timeout: 15000,
+    })
     .toBe(before);
   await page.getByRole("button", { name: "Lưới ô", exact: true }).click();
   await expect(
